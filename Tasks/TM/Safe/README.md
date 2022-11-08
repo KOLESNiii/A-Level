@@ -13,7 +13,7 @@ By Tim K.
 How To Run
 
 Method One
--Run the .exe, attached in folder to assignment, also found in the /bin/Debug/net6.0/ folder
+-Run the .exe, found in releases, attached in folder to assignment, and also found in the /bin/Debug/net6.0/ folder
 -If it does not run, ensure .NET framework is installed (should be on any Windows machine after Vista)
 -Ensure Safe.DLL and Safe.runtimeconfig.json are present in the folder
 
