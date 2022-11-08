@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\Safe\\Safe.csproj",
+      "projectUniqueName": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\TM\\Safe\\Safe.csproj",
       "projectName": "Safe",
-      "projectPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\Safe\\Safe.csproj",
+      "projectPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\TM\\Safe\\Safe.csproj",
       "packagesPath": "C:\\Users\\timko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\Safe\\obj\\",
+      "outputPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\TM\\Safe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
