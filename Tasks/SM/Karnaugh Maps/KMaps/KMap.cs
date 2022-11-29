@@ -150,6 +150,14 @@ namespace KMap
         private static string GenerateBooleanANDGroup(string value, string letters)
         {
             string output = String.Empty;
+            if (value == "x0")
+            {
+                return "0";
+            }
+            else if (value == "x1")
+            {
+                return "1";
+            }
             for (int i = 0; i < value.Length; i++)
             {
                 string c = value[i].ToString();
@@ -272,11 +280,11 @@ namespace KMap
             var groups = new List<Group>();
             if (values.Count() == 0)
             {
-                groups = new List<Group>{new Group("0")};
+                groups = new List<Group>{new Group("x0")};
             }
             else if (values.Count() == Math.Pow(2,values[0].Length))
             {
-                groups = new List<Group>{new Group("1")};
+                groups = new List<Group>{new Group("x1")};
             }
             else {
                 groups = Group.MakeGroups(values);
