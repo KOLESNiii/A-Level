@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\KMaps\\KMaps.csproj",
+      "projectUniqueName": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\SM\\Karnaugh Maps\\KMaps\\KMaps.csproj",
       "projectName": "KMaps",
-      "projectPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\KMaps\\KMaps.csproj",
+      "projectPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\SM\\Karnaugh Maps\\KMaps\\KMaps.csproj",
       "packagesPath": "C:\\Users\\timko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\C#\\KMaps\\obj\\",
+      "outputPath": "C:\\Users\\timko\\OneDrive - Altrincham Grammar School for Boys\\Programs\\A-Level\\Tasks\\SM\\Karnaugh Maps\\KMaps\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

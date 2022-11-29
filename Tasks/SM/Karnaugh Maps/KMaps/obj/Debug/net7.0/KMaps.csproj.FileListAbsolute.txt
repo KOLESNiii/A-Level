@@ -28,3 +28,18 @@ C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\C#\KMaps\o
 C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\C#\KMaps\obj\Debug\net7.0\KMaps.pdb
 C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\C#\KMaps\obj\Debug\net7.0\KMaps.genruntimeconfig.cache
 C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\C#\KMaps\obj\Debug\net7.0\ref\KMaps.dll
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\bin\Debug\net7.0\KMaps.exe
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\bin\Debug\net7.0\KMaps.deps.json
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\bin\Debug\net7.0\KMaps.runtimeconfig.json
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\bin\Debug\net7.0\KMaps.dll
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\bin\Debug\net7.0\KMaps.pdb
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.csproj.AssemblyReference.cache
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.AssemblyInfoInputs.cache
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.AssemblyInfo.cs
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.csproj.CoreCompileInputs.cache
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.dll
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\refint\KMaps.dll
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.pdb
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\KMaps.genruntimeconfig.cache
+C:\Users\timko\OneDrive - Altrincham Grammar School for Boys\Programs\A-Level\Tasks\SM\Karnaugh Maps\KMaps\obj\Debug\net7.0\ref\KMaps.dll

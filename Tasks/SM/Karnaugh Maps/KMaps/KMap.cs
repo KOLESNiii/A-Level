@@ -269,16 +269,17 @@ namespace KMap
         //wrapper method for simplification
         public static List<Group> Simplify(List<string> values)
         {
+            var groups = new List<Group>();
             if (values.Count() == 0)
             {
-                var groups = new List<Group>{new Group("0")};
+                groups = new List<Group>{new Group("0")};
             }
             else if (values.Count() == Math.Pow(2,values[0].Length))
             {
-                var groups = new List<Group>{new Group("1")};
+                groups = new List<Group>{new Group("1")};
             }
             else {
-                var groups = Group.MakeGroups(values);
+                groups = Group.MakeGroups(values);
                 groups = ReduceToPrimeImplicants(groups);
                 
                 groups = FilterRedundantExpressions(groups);
