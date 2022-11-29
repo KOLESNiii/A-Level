@@ -269,16 +269,22 @@ namespace KMap
         //wrapper method for simplification
         public static List<Group> Simplify(List<string> values)
         {
-            var groups = Group.MakeGroups(values);
-            groups = ReduceToPrimeImplicants(groups);
-            /*foreach (Group g in groups)
+            if (values.Count() == 0)
             {
-                Console.WriteLine(g.Value);
-                Console.WriteLine(string.Join(",", g.Minterms));
-            }*/
-            groups = FilterRedundantExpressions(groups);
-            
+                var groups = new List<Group>{new Group("0")};
+            }
+            else if (values.Count() == Math.Pow(2,values[0].Length))
+            {
+                var groups = new List<Group>{new Group("1")};
+            }
+            else {
+                var groups = Group.MakeGroups(values);
+                groups = ReduceToPrimeImplicants(groups);
+                
+                groups = FilterRedundantExpressions(groups);
+            }
             return groups;
+
         }
     }
 }
