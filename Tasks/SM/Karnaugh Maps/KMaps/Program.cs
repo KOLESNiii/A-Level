@@ -10,7 +10,7 @@ namespace Program
         public static void Main(string[] args)
         {
             string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            List<string> values = new List<string>{"0000", "0001", "0100", "0101", "1100", "1101", "1000", "1001", "0010", "0110", "1010"};            
+            List<string> values = new List<string>{"0001","0011","0100","0101","0110","1100","1111","1110","1001","1011"};            
             if (!Validation.IsSameLength(values))
             {
                 throw new Exception("All inputs must be the same number of bits");
@@ -19,55 +19,9 @@ namespace Program
             {
                 throw new Exception("Inputs must be smaller than number of letters denoting inputs");
             }
-            
-            var finalGroups = new List<Group>();
-            var groups = Group.MakeGroups(values);
-            groups = Simplifier.Combine(groups);
-            foreach (Group g in groups)
-            {
-                Console.WriteLine(g.Value);
-            }
-            Console.WriteLine("\n");
-            List<int> allPrimeImplicants = new List<int>();
-            bool primeImplicantsLeft = true;
-            foreach (Group g in groups)
-                {
-                    allPrimeImplicants.AddRange(g.Minterms);
-                }
-            int essentialPrimeImplicant;
-            while (primeImplicantsLeft)
-            {
-                var essentialPrimeImplicants = allPrimeImplicants.GroupBy(i => i).Where(m => m.Count() == 1).Select(m => m.First()).ToList();
-                if (essentialPrimeImplicants.Count() == 0)
-                {
-                    primeImplicantsLeft = false;
-                    break;
-                }
-                else
-                {
-                    essentialPrimeImplicant = essentialPrimeImplicants[0];
-                }
-                foreach (Group g in groups)
-                {
-                    if (g.Minterms.Contains(essentialPrimeImplicant))
-                    {
-                        finalGroups.Add(g);
-                        groups.Remove(g);
-                        allPrimeImplicants = allPrimeImplicants.Where(m => !g.Minterms.Contains(m)).ToList();
-                        break;
-                    }
-                }
-            }
-            if (allPrimeImplicants.Count() > 0)
-            {
-                finalGroups.Add(groups[0]);
-            }
-            //allPrimeImplicants = allPrimeImplicants.Distinct().ToList();
-            foreach (Group g in finalGroups)
-            {
-                Console.WriteLine(g.Value);
-            }
-            Console.WriteLine(Simplifier.GenerateOutputString(finalGroups, letters));
+
+            var groups = Simplifier.Simplify(values);
+            Console.WriteLine(Simplifier.GenerateOutputString(groups, letters));
         }
     }
 
