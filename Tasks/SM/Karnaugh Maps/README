@@ -1,0 +1,7 @@
+KMaps is C# project which contains all the logic for the simplification of the Karnaugh Map. 
+This uses the Quine McCluskey method to simplify the logic. 
+
+Build/Web contains the completed graphical project, ready to be used through a web browser. This is hosted on https://kolesniii.github.io/Karnaugh-Map-Simplifier-Web/
+
+Assets contains all the 2D resources and scripts used in Unity to make the program. This excludes the 1.5GB worth of Unity libraries and packages that
+are bundled into every project.
