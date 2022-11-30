@@ -1,0 +1,22 @@
+.simpleButton:hover {
+    -unity-background-image-tint-color: rgba(195, 195, 195, 0.64);
+}
+
+.simpleButton:active {
+    -unity-background-image-tint-color: rgba(120, 120, 120, 0.52);
+}
+
+.simpleButton {
+    color: rgba(27, 27, 27, 0);
+    font-size: 0.1px;
+    width: 76px;
+    height: 76px;
+}
+
+.settings-button:hover {
+    -unity-background-image-tint-color: rgba(130, 130, 130, 0.81);
+}
+
+.settings-button:active {
+    -unity-background-image-tint-color: rgba(87, 87, 87, 255);
+}
