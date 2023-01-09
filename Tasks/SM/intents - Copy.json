@@ -1,0 +1,52 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+		{"tag": "specification",
+		"patterns": ["Show me the full specification", "What is the full specification?", "What is the specification?", "Show me the specification", "What is the specification like?", "Show me an overview of the specification", "What are the key topics?"],
+		"responses": ["Here is an overview of the course\n 1.1 Systems architecture\n 1.2 Memory and storage\n 1.3 Computer networks, connections and protocols\n 1.4 Network security\n 1.5 Systems software\n 1.6 Ethical, legal, cultural and environmental impacts of digital technology\n\n 2.1 Algorithms\n 2.2 Programming fundamentals\n 2.3 Producing robust programs\n 2.4 Boolean logic\n 2.5 Programming languages and Integrated Development Environments\n\nFeel free to ask about any topic in particular\n\nYou can access the full specification here: \nhttps://www.ocr.org.uk/Images/558027-specification-gcse-computer-science-j277.pdf"]
+		},
+		{"tag": "calculator",
+		"patterns": ["Can you use a calculator?", "Is a calculator allowed?"],
+		"responses": ["No, calculators are not allowed."]
+		},
+		{"tag": "teachers",
+		"patterns": ["Who teaches computer science?", "Who will be my teacher?", "Who is in the computer science department?"],
+		"responses": ["Mr Timmins (Lord Timmins of Mobberley), Mr Smith, Mr Cummins and Mr Carr are the 4 GCSE Computer Science teachers. You may be taught by any of them."]	
+		},
+		{"tag": "purpose",
+		"patterns": ["Why should I study computer science?", "What are the aims of computer science?", "What are the aims of the course?", "What are the benefits of taking computer science?"],
+		"responses": ["The course will encourage you to think creatively, innovatively, analytically, logically and critically. \nYou will also understand the components that make up digital systems, and how they communicate with one another and with other systems.\nYou will understand the impacts of digital technology to the individual and to wider society"]
+		},
+		{"tag": "learning",
+		"patterns": ["What will I learn?", "What will I be studying?", "What will I be doing?", "What will I be doing in computer science?"],
+		"responses": ["By the end of the course, you will be able to understand and apply the fundamental principles and concepts of Computer Science:\n   abstraction\n   decomposition\n   logic\n   algorithms\n   data representation\nYou will also be able to analyse problems in computational terms through practical experience of solving such problems,\nThis includes designing, writing and debugging programs\nFeel free to ask about the specification or any topic in particular."]
+		},
+		{"tag": "exam",
+		"patterns": ["What is the exam like?", "How long is the exam?", "How many questions are there?", "What is the exam format?", "What is the exam format like?"],
+		"responses": ["There are two papers: one focusing on computer systems and one with a focus on programming, computational thinking, and algorithms.\nEach paper is 1 hour 30 minutes long and is worth 50% of the total GCSE grade. There are 80 marks available in each paper.\nYou also have to undertake a non-examined assessment programming task. You must use one or more high-level programming languages: \n•Python\n•C family of languages (C#, C++, etc.)\n•Java\n•JavaScript\n•Visual Basic/.Net\n•PHP\n•Delphi\n•BASIC\nFeel free to ask about the assessment objectives or any topic in particular."]
+		},
+		{"tag": "grades",
+		"patterns": ["What are the average grades at AGSB?", "What grades do people get at AGSB?", "What grades do people get in computer science?", "What grades do people get in GCSE computer science?"],
+		"responses": []
+		},
+		{"tag": "ALevels",
+		"patterns": ["Does this tie in to A Level computer science?", "Will this help me with A Level computer science?", "Will this help me with A Level?", "Will this help me with A Levels?", "Will this help me with A Levels computer science?", "Is this necessary for A Level computer science?"],
+		"responses": ["Yes, this course will help you with A Level computer science, as many A Level topics are continuations of GCSE topics. However, taking GCSE computer science is not a requirement for taking A Level computer science."]
+		},
+		{"tag": "AOs",
+		"patterns": ["What are the assessment objectives?", "What are the assessment objectives for the exam?", "What are the assessment objectives for the non-examined assessment?", "What are the assessment objectives for the programming task?", "How do I get the marks in an exam?"],
+		"responses": ["Assessment Objective 1\nDemonstrate knowledge and understanding of the key concepts and principles of Computer Science\n\nAssessment Objective 2\nApply knowledge and understanding of key concepts and principles of Computer Science\n\nAssessment Objective 3\nAnalyse problems in computational terms:\n•to make reasoned judgements\n•to design, program, evaluate and refine solutions."]
+		}
+	]
+}
