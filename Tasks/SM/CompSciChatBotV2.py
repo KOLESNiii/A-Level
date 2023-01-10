@@ -1,6 +1,6 @@
 import nltk
-from nltk.stem.snowball import SnowballStemmer
-stemmer = SnowballStemmer("english")
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
 
 import numpy
 import tflearn
@@ -8,48 +8,10 @@ import tensorflow
 import random
 import json
 import pickle
-
+import openai
+openai.api_key = "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"
 with open("intents.json") as file:
     data = json.load(file)
-new = False
-if new == True:
-    with open("Spec.json") as file:
-        spec = json.load(file)
-    cleanSpec = []
-    for line in spec:
-        cleanSpec.append(line.strip("\n"))
-    dataToAdd = {}
-    tempKeyName = None
-    tempKeyValue = None
-    for line in cleanSpec:
-        if line[1] == "." and line[3] == ".":
-            if tempKeyName != None and tempKeyValue != None:
-                dataToAdd.update({tempKeyName: tempKeyValue})
-            tempKeyName = line
-        if not line[0].isnumeric():
-            tempKeyValue = line
-    numericalLines = []
-    for line in cleanSpec:
-        if line[0].isnumeric():
-            numericalLines.append(line)
-    tempKeyName = "1.1 Systems architecture"
-    tempKeyValue = []
-    for line in numericalLines:
-        if line == tempKeyName:
-            pass
-        elif line[:3] == tempKeyName[:3]:
-            tempKeyValue.append(line)
-        elif line[:3] != tempKeyName[:3]:
-            dataToAdd.update({tempKeyName:"\n".join(tempKeyValue)})
-            tempKeyName = line
-            tempKeyValue = []
-    for key, value in dataToAdd.items():
-        if key[3] == " ":
-            data["intents"].append({"tag": key, "patterns": [key, key[:3], key[4:], "What is in chapter "+key[:3]+"?", "Tell me about the "+key[4:]+" topic", "Topic "+key[:3], "What are the subtopics of topic "+key[:3]+"?"], "responses": [value+"\nfeel free to ask about any of these subtopics."]})
-        else:
-            data["intents"].append({"tag": key, "patterns": [key, key[:5], key[6:], "What is in chapter "+key[:5]+"?", "Tell me about the "+key[6:]+" topic", "Topic "+key[:5]], "responses": [value]})
-    with open("intents.json", "w") as file:
-        json.dump(data, file)
 #extracting data from JSON
 try:
     with open("data.pickle", "rb") as f:
@@ -67,7 +29,12 @@ except:
             docs_y.append(intent["tag"])
         if intent["tag"] not in labels:
             labels.append(intent["tag"])
-            
+    
+    words = [stemmer.stem(w.lower()) for w in words if w != "?"]
+    words = sorted(list(set(words)))
+    
+    labels = sorted(labels)
+         
     training = []
     output = []
 
@@ -102,6 +69,9 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
+#model.load("model.tflearn")
+model.fit(training, output, n_epoch=5000, batch_size=8, show_metric=True)
+model.save("model.tflearn")
 model.load("model.tflearn")
 
 def bag_of_words(s, words):
@@ -120,21 +90,31 @@ def bag_of_words(s, words):
 def chat():
     print("Start talking with the bot (type quit to stop)!")
     while True:
-        inp = input("You: ")
+        inp = input("\n\nYou: ")
         if inp.lower() == "quit":
             break
-
         results = model.predict([bag_of_words(inp, words)])
-        print(results)
+        for i, value in enumerate(results[0]):
+            print(str(i)+". "+ labels[i]+": " + str(value))
         results_index = numpy.argmax(results)
         print(results_index)
         tag = labels[results_index]
+        if numpy.max(results)/numpy.min(results) < 1000:
+            tag = "None"
+        elif numpy.max(results) < 0.5:
+            tag = "None"
         print(tag)
-
-        for tg in data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
-
-        print(random.choice(responses))
+        if tag == "None":
+            responses = [
+                        "Please be clearer with your query",
+                        "I do not understand your question", 
+                        "I do not understand", 
+                        "Please be more specific"
+                         ]
+        else:
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+        print("\n\nChatBot: "+random.choice(responses))
 
 chat()
