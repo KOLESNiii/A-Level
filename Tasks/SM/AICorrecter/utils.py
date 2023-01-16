@@ -27,6 +27,7 @@ class CharacterTable(object):
         # Arguments
           chars: Characters that can appear in the input.
         """
+        
         self.chars = sorted(set(chars))
         self.char2index = dict((c, i) for i, c in enumerate(self.chars))
         self.index2char = dict((i, c) for i, c in enumerate(self.chars))
@@ -206,6 +207,7 @@ def decode_sequences(inputs, targets, input_ctable, target_ctable,
 
     # Encode the input as state vectors.    
     states_value = encoder_model.predict(input_sequences)
+    
     
     # Create batch of empty target sequences of length 1 character.
     target_sequences = np.zeros((nb_examples, 1, target_ctable.size))

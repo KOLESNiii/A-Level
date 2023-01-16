@@ -107,7 +107,9 @@
         "What is the exam like?",
         "How long is the exam?",
         "How many questions are there?",
-        "exam format"
+        "exam format",
+        "exam structure",
+        "assessment"
       ],
       "responses": [
         "There are two papers: one focusing on computer systems and one with a focus on programming, computational thinking, and algorithms.\nEach paper is 1 hour 30 minutes long and is worth 50% of the total GCSE grade. There are 80 marks available in each paper.\nYou also have to undertake a non-examined assessment programming task. You must use one or more high-level programming languages: \n   Python\n   C family of languages (C#, C++, etc.)\n   Java\n   JavaScript\n   Visual Basic/.Net\n   PHP\n   Delphi\n   BASIC\nFeel free to ask about the assessment objectives or any topic in particular."

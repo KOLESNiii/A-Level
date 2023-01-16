@@ -9,6 +9,7 @@ from utils import CharacterTable, transform
 from utils import batch, datagen, decode_sequences
 from utils import read_text, tokenize
 from model import seq2seq
+import pickle
 
 error_rate = 0.8
 hidden_size = 512
@@ -77,6 +78,8 @@ if __name__ == '__main__':
     train_steps = len(vocab) // train_batch_size
     val_steps = len(val_tokens) // val_batch_size
 
+    with (open("modelVariables.pickle", "wb")) as f:
+        pickle.dump((input_ctable, target_ctable, maxlen), f)
     # Compile the model.
     model, encoder_model, decoder_model = seq2seq(
         hidden_size, nb_input_chars, nb_target_chars)

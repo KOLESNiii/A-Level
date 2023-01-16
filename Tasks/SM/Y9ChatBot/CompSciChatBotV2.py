@@ -8,6 +8,7 @@ import tensorflow
 import random
 import json
 import pickle
+import os
 
 #opening keyword and response data
 with open("intents.json") as file:
@@ -68,12 +69,10 @@ net = tflearn.regression(net) #output, gives a numerical value based on its pred
 
 model = tflearn.DNN(net) #converts network into a model
 
-try:
-    model.load("model.tflearn") #tries to load
-except: #if not possible, has to rebuilt model
-    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")
-    model.load("model.tflearn")
+if not os.path.isfile("model.tflearn.meta"): #checks if model exists
+    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True) #trains model
+    model.save("model.tflearn") #saves model
+model.load("model.tflearn") 
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))] #empty array
